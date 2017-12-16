@@ -26,9 +26,19 @@ class Parallex extends Component {
       transform: `translate3d( ${this.state.mousePos.x / -40}px, ${this.state.mousePos.y / -40}px, 0 )`,
 
     }
-    return <div className='move'  onMouseMove={this.mouseMove.bind(this)}>
-      <h1><span className='moving' style={offset}>Ella Mae Arana</span></h1>
-    </div>
+    return (
+      <div>
+        <div className='move'  onMouseMove={this.mouseMove.bind(this)}>
+          <h1>
+            <span className='moving' style={offset}>Ella Mae Arana</span>
+          </h1>
+          <h3 className='jobTitle'>
+            Full Stack Javascript Web Developer
+          </h3>
+        </div>
+      </div>
+    )
+
   }
 }
 

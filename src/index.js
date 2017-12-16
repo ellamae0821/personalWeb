@@ -8,14 +8,17 @@ import {
   Route
 } from 'react-router-dom';
 import Header from './containers/Header';
-
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 ReactDOM.render(
   <Router>
     <div>
       <Header/>
-      <div>
-      <Route exact path="/" component={App} />
-      </div>
+        <div>
+        <Route exact path="/" component={App} />
+        <Route path="/resume" component={Resume} />
+        </div>
+      <Footer/>
     </div>
   </Router>
 

@@ -1,10 +1,9 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
-import logo from '../logo_ea.svg'
+import logo from '../ea_Logo.svg'
 import 'react-sticky-header/styles.css';
 import StickyHeader from 'react-sticky-header';
-//const image = 'hiphipheader.jpg';
-//const bgurl = require(`../assets/${image}`);
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -17,9 +16,17 @@ const Header = () => {
       header={
         <div className="header_wrapper">
 
-            <div className="header_logo"><img alt="logo" src={logo} /> </div>
-            <div className="wtf">
-              <div className="header_text">Resume</div>
+            <div className="header_logo">
+              <Link to="/">
+                <img alt="logo" src={logo} />
+              </Link>
+            </div>
+            <div className="navtexts">
+              <div className="header_text">
+                <Link to="/resume">
+                Resume
+                </Link>
+              </div>
               <div className="header_text">Portfolio</div>
               <div className="header_text">Contact Me</div>
             </div>

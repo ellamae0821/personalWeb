@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Parallex from '../containers/Parallex';
-import Header from '../containers/Header';
+import Home from '../components/Home';
+
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        <Parallex/>
+        <Home/>
       </div>
     )
   }
