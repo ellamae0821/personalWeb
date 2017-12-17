@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import HTML from '../assets/html.png';
+import CSS from '../assets/css.png';
+import SASS from '../assets/sass.png';
+import JS from '../assets/js.png';
 
 
 

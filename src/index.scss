@@ -163,7 +163,7 @@ a{
   display: inline-block;
   width:100%;
   padding-right: 60px;
-  padding-top: 40px;
+  padding-top: 20px;
   text-decoration: none;
 
   @include transition(.5s ease-in-out);
@@ -210,4 +210,10 @@ a{
   font-size: 13px;
   color: #990099;
   font-family: 'PT Sans', sans-serif;
+}
+
+.eachTech{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
