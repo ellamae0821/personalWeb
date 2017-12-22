@@ -12,6 +12,7 @@ import REACT_LOGO from '../assets/react.svg';
 import PSQL from '../assets/psql.png';
 import ANGULAR from '../assets/angular.png';
 import BEK from '../assets/bek.png';
+import CMS from '../assets/cms.png';
 import GULP from '../assets/gulp.png';
 
 
@@ -26,10 +27,9 @@ class Portfolio extends Component {
           <img src={avatar} height="150" width="119"/>
             <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150"/>
           </div>
-          <div className="highlights">WHO? </div>
-          I'm <div className="fullName">Ella Mae Arana</div>, a web developer from Hawaii, who loves to build creative and useful web-apps. <div className="highlights">WHY? </div>One day, I woke up & wanted to build (modern) tools to make the world a better place, so, I taught myself how to code aaand bruh, it was <a href="http://www.devleague.com"><em>intense</em></a> but nothing is more fulfilling after seeing every tool I have created and knowing its impact on someone or in a society. <br/>
-            <div className="highlights">OK? </div>While learing to code, I believe in the importance of stability with solid foundation and sprinkle it with best practices. Also, yes, I handcrafted this single page website using React JS.  <br/> <br/> TLDR; I can get the job
-            done , but first, I need a job.
+
+          I'm <div className="fullName">Ella Mae Arana</div>, a web developer from Hawaii, who loves to build creative and useful web-apps. <div className="highlights">WHY? </div>I woke up one day & wanted to build (modern) tools to make the world a better place, so, I taught myself how to code and bruh, it was <a href="http://www.devleague.com"><em>intense</em></a> but nothing is more fulfilling after seeing every tool I have created and knowing its impact on someone or in a society. <br/>
+            <div className="highlights">OK? </div>While learing to code, I believe in the importance of stability with solid foundation and sprinkle it with best practices. Also, yes, I handcrafted this single page website using React JS.  <br/> <br/> TLDR; I enjoy coding, and I am actively seeking for a full-time job.
           </div>
 
           <div className="titlePort">Skills</div>
@@ -48,12 +48,14 @@ class Portfolio extends Component {
               <div className="card"><img src={WP} alt="HTML5_logo"/><p>WordPress</p></div>
             </div> <br/>
           <div className="titlePort">Portfolio</div>
-            <div className="techWrapper">
-              <a href="http://bek.ellamaearana.com"> <div className="cardBek"><img src={BEK} alt="HTML5_logo"/><p>Bek (Shifty)</p></div></a>
-              <a href="http://bek.ellamaearana.com"> <div className="cardBek"><img src={BEK} alt="HTML5_logo"/><p>Bek (Shifty)</p></div></a>
-              <a href="http://bek.ellamaearana.com"> <div className="cardBek"><img src={BEK} alt="HTML5_logo"/><p>Bek (Shifty)</p></div></a>
+            <div className="portWrapper">
+              <div className="cardBek"><a href="http://bek.ellamaearana.com"> <img src={BEK} alt="HTML5_logo"/></a><p>Bek (Shifty) <br/> A web-app that allows workers to get notified realtime of open shifts and claim them, as well as view schedules. Creates a fast and easy way to exchange shifts with other workers through SMS. Built with React, Postgresql, node+express  and integrated Google Calendar, Twilio and OAuth.
+</p></div>
+               <div className="cardBek"><a href="https://github.com/ellamae0821/consume-more-stuff/tree/development"><img src={CMS} alt="HTML5_logo"/></a><p>Consume More Stuff <br/> A content management system web-app for personal product sale. Built with React, Node, Express, and Postgresql.
+</p></div>
+
             </div>
-          <div className="titlePort">When I'm not coding:</div>
+
 
         <div className="technologies">
           <div className="techCards">

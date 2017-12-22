@@ -11,6 +11,7 @@ import Header from './containers/Header';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 ReactDOM.render(
   <Router>
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route exact path="/" component={App} />
         <Route path="/resume" component={Resume} />
         <Route path="/portfolio" component={Portfolio} />
+        <Route path="/contact" component={Contact} />
         </div>
       <Footer/>
     </div>

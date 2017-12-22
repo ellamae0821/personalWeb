@@ -27,8 +27,16 @@ const Header = () => {
                 Resume
                 </Link>
               </div>
-              <div className="header_text">Portfolio</div>
-              <div className="header_text">Contact Me</div>
+              <div className="header_text">
+                <Link to="/portfolio">
+                Portfolio
+                </Link>
+              </div>
+              <div className="header_text">
+                <Link to="/contact">
+                  Contact Me
+                </Link>
+                </div>
             </div>
 
 
