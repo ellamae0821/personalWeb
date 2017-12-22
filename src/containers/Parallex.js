@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import HTML from '../assets/html.png';
-import CSS from '../assets/css.png';
-import SASS from '../assets/sass.png';
-import JS from '../assets/js.png';
+import { Link } from 'react-router-dom';
+
+
 
 
 
@@ -39,6 +38,16 @@ class Parallex extends Component {
           <h3 className='jobTitle'>
             Full Stack Javascript Web Developer
           </h3>
+          <Link to="/portfolio">
+              <div className="login-btn">
+                <div className="login-btn2">
+                  <span className="login-span">01001101 01100101</span>
+                  <span className="login-span">
+                  About Me
+                </span>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     )

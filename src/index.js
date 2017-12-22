@@ -10,6 +10,8 @@ import {
 import Header from './containers/Header';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
+
 ReactDOM.render(
   <Router>
     <div>
@@ -17,6 +19,7 @@ ReactDOM.render(
         <div>
         <Route exact path="/" component={App} />
         <Route path="/resume" component={Resume} />
+        <Route path="/portfolio" component={Portfolio} />
         </div>
       <Footer/>
     </div>

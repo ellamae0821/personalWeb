@@ -11,7 +11,7 @@ class Footer extends Component {
         <a href="https://www.linkedin.com/in/ella-mae-arana/">
           <i class="fa fa-linkedin"></i>
         </a>
-        <a href="ella.d.arana@gmail.com">
+        <a href="mailto:ella.d.arana@gmail.com">
           <i class="fa fa-envelope"></i>
         </a>
         <div className="madeBy">

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|PT+Sans');
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 body{
   font-family: 'Raleway', sans-serif;
@@ -10,7 +10,7 @@ body{
 
 .move{
   position: relative;
-  height: 71vh;
+  height: 80vh;
   width: 100vw;
   max-width: 100%;
 
@@ -193,6 +193,8 @@ a{
 
 .footer{
   text-align: center !important;
+  bottom:3%;
+  left:44%;
 
 }
 
@@ -216,4 +218,183 @@ a{
   display: inline-block;
   width: 20px;
   height: 20px;
+}
+
+
+.login-btn {
+  width:200px;
+  height:60px;
+  cursor:pointer;
+  perspective:500px;
+  -webkit-perspective:500px;
+  padding-right: 20px;
+  margin-right: 10px;
+  position: absolute;
+  top: 70%;
+  left: 41%;
+}
+
+.login-btn:hover .login-btn2{
+  transform:rotateX(-90deg);
+}
+
+@media (hover:none), (hover:on-demand) {
+  .login-btn:hover .login-btn2{
+    transform:rotateX(-90deg);
+}
+}
+
+.login-span{
+  width:100%;height:100%;
+  position:absolute;
+  box-sizing:border-box;
+  border:5px solid #f8cacc;
+  font-family:'Source Sans Pro',
+  sans-serif;line-height:50px;
+  font-size:12pt;
+  text-align:center;
+  text-transform:uppercase;
+}
+.login-span:nth-child(1){
+  color:#8895c3;
+  transform: translate3d(0, 0, 30px);
+  -webkit-transform: translate3d(0, 0, 30px);
+}
+.login-span:nth-child(2){
+  color: #F8CAC5;
+  background: #8895c3;
+  transform: rotateX(90deg) translate3d(0, 0, 30px);
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);}
+
+.login-btn2{
+  height:100%;
+  transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+  transition:0.25s;
+  -webkit-transition:0.25s;}
+
+
+
+.portfolio{
+  position:absolute;
+  top:30%;
+  color: #990099;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  width: 600px;
+  margin: 0px auto 30px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  text-align: center;
+  font-weight: 200;
+}
+
+.avatar-flip {
+  border-radius: 150px;
+  overflow: hidden;
+  height: 150px;
+  width: 119px;
+  position: relative;
+  margin: auto;
+  top: -30px;
+  box-shadow: 0 0 0 13px #bbc2dd;
+  -webkit-box-shadow: 0 0 0 13px #bbc2dd;
+  -moz-box-shadow: 0 0 0 13px #bbc2dd;
+}
+.avatar-flip img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+.avatar-flip img:first-child {
+  z-index: 1;
+}
+.avatar-flip img:last-child {
+  z-index: 0;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.hey{
+  font-weight: 500;
+  font-size:116px;
+}
+
+.fullName{
+  display: inline-block;
+  color: #e086dd;
+  font-weight: 100;
+}
+
+.techWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.card{
+  display: inline-block;
+  flex: 1 1 calc(10% - 1rem);
+  transition: all 200ms ease;
+  background: #fff;
+  border: 1px solid #ebecec;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin: .5rem;
+  padding: 2.5rem;
+}
+
+p{
+  text-align: center;
+}
+
+.techWrapper .card img{
+  max-width: 50px;
+  border-radius:6px;
+}
+
+.card img{
+  display: block;
+  margin: 0 auto;
+}
+
+.titlePort{
+  text-align: center;
+  color: #990099;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.cardBek img{
+
+  display: block;
+  width: 325px;
+  height: 200px;
+  flex: 1 1 calc(50% - 1rem);
+  transition: all 200ms ease;
+  background: #fff;
+  border: 1px solid #ebecec;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin: .5rem;
+  padding: 2.5rem;
+}
+
+.highlights {
+  display: inline-block;
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
 }
