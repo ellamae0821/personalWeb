@@ -468,6 +468,15 @@ p{
   .navtexts{
     padding-right: 2px;
   }
+  .container{
+    width: 390px;
+    font-size: 15px;
+  }
+
+  .avatar-flip{
+    top: -14px;
+  }
+
 }
 
 @media screen and (max-width: 414px) {
@@ -478,6 +487,21 @@ p{
 
   .login-btn {
     left: 28%;
+  }
+  .navtexts{
+    padding-right: 0px;
+    font-size: 13px;
+  }
+
+  .container{
+    width: 350px;
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+
+  }
+
+  .cardBek{
+  padding: 0.5rem;
   }
 }
 
@@ -500,7 +524,22 @@ p{
   }
 
   .navtexts{
-    padding-right: 5px;
+    padding-right: 0px;
+    font-size: 13px;
+  }
+
+  .container{
+    width: 300px;
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+
+  }
+  .portfolio{
+    width:350px;
+  }
+
+  .cardBek{
+  padding: 0.5rem;
   }
 
 }
