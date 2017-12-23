@@ -24,7 +24,7 @@ const Header = () => {
             <div className="navtexts">
               <div className="header_text">
                 <Link to="/resume">
-                Resume
+                Resumé
                 </Link>
               </div>
               <div className="header_text">
