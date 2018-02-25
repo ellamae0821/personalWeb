@@ -27,9 +27,10 @@ class Portfolio extends Component {
           <img src={avatar} height="150" width="119"/>
             <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150"/>
           </div>
+            I'm a Full Stack Developer from Honolulu, <br/> who loves to build creative and useful tools to make a positive impact in the world. <br/><br/>
 
-          I'm <div className="fullName">Ella Mae Arana</div>, a web developer from Hawaii, who loves to build creative and useful web-apps. <div className="highlights">WHY? </div>I woke up one day & wanted to build (modern) tools to make the world a better place, so, I taught myself how to code and bruh, it was <a href="http://www.devleague.com"><em>intense</em></a> but nothing is more fulfilling after seeing every tool I have created and knowing its impact on someone or in a society. <br/>
-            <div className="highlights">OK? </div>While learing to code, I believe in the importance of stability with solid foundation and sprinkle it with best practices. Also, yes, I handcrafted this single page website using React JS.  <br/> <br/> TLDR; I enjoy coding, and I am actively seeking for a full-time job.
+              I love working in a collaborative environment and my eye for design and user-driven approach to development is what excites and inspires me to always be coding.<br/>
+
           </div>
 
           <div className="titlePort">Skills</div>
@@ -51,7 +52,7 @@ class Portfolio extends Component {
             <div className="portWrapper">
               <div className="cardBek"><a href="http://bek.ellamaearana.com"> <img src={BEK} alt="HTML5_logo"/></a><p>Bek (Shifty) <br/> A web-app that allows workers to get notified realtime of open shifts and claim them, as well as view schedules. Creates a fast and easy way to exchange shifts with other workers through SMS. Built with React, Postgresql, node+express  and integrated Google Calendar, Twilio and OAuth.
 </p></div>
-               <div className="cardBek"><a href="https://github.com/ellamae0821/consume-more-stuff/tree/development"><img src={CMS} alt="HTML5_logo"/></a><p>Consume More Stuff <br/> A content management system web-app for personal product sale. Built with React, Node, Express, and Postgresql.
+               <div className="cardBek"><a href="https://github.com/ellamae0821/consume-more-stuff/tree/development"><img src={CMS} alt="HTML5_logo"/></a><p>Consume More Stuff <br/> A minimal CMS to allow users to list personal items for sale. Built with React, Node, Express, and PostgreSQL.
 </p></div>
 
             </div>
