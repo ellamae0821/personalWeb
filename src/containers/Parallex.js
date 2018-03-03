@@ -41,9 +41,9 @@ class Parallex extends Component {
           <Link to="/portfolio">
               <div className="login-btn">
                 <div className="login-btn2">
-                  <span className="login-span">01001101 01100101</span>
+                  <span className="login-span">About Me</span>
                   <span className="login-span">
-                  About Me
+                  Click Me!
                 </span>
               </div>
             </div>

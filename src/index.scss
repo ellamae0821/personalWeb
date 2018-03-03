@@ -13,6 +13,9 @@ body{
   height: 80vh;
   width: 100vw;
   max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -51,12 +54,11 @@ h1 span {
 
 .jobTitle{
   font-weight: 200;
-  position: absolute;
   top: 55%;
-  left: 37%;
-
+  max-width: 50%;
   font-family: 'Raleway', sans-serif;
   color: #990099;
+
 }
 
 
@@ -64,7 +66,7 @@ h1 span {
 h1{
   position: absolute;
   top: 35%;
-  left: 50%;
+
   transform: translateX(-50%) translateY(-50%);
   font-size: 5em;
   font-weight: 700;
@@ -384,27 +386,7 @@ p{
   font-size: 40px;
   font-weight: 200;
 }
-/*
-.cardBek{
-  width: 40%;
-  flex: 1 1 calc(50% - 1rem);
-  text-align: center;
 
-}
-.cardBek img{
-
-  display: block;
-  width: 325px;
-  height: 200px;
-  transition: all 200ms ease;
-  background: #fff;
-  border: 1px solid #ebecec;
-  border-radius: 6px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  margin: .5rem;
-  padding: 2.5rem;
-
-} */
 
 
 .cardBek{
@@ -446,16 +428,53 @@ p{
 .contact{
   padding-top: 100px;
 }
+/*
+ @media screen and (min-width: 1400px) {
 
-@media screen and (max-width: 650px) {
 
   .jobTitle{
-    left:30%;
-    font-size: 13px;
+    font-weight: 200;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+
   }
 
   h1{
     font-size: 3em;
+  }
+
+  .login-btn {
+    left: 33%;
+  }
+  .header_logo{
+    padding-left: 10px;
+  }
+
+  .navtexts{
+    padding-right: 2px;
+  }
+  .container{
+    width: 390px;
+    font-size: 15px;
+  }
+
+  .avatar-flip{
+    top: -14px;
+  }
+
+} */
+
+
+@media screen and (max-width: 650px) {
+
+  .jobTitle{
+
+    font-size: 13px;
+  }
+
+  h1{
+    font-size: 3.5em;
   }
 
   .login-btn {
@@ -482,7 +501,7 @@ p{
 @media screen and (max-width: 414px) {
 
   .jobTitle{
-    left:26%;
+
   }
 
   .login-btn {
@@ -508,7 +527,7 @@ p{
 @media screen and (max-width: 365px) {
 
   .jobTitle{
-    left:20%;
+
   }
 
   h1{
