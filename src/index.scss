@@ -8,6 +8,9 @@ body{
   margin: 0;
 }
 
+
+
+
 .move{
   position: relative;
   height: 80vh;
@@ -17,4 +20,57 @@ body{
   align-items: center;
   justify-content: center;
 
+}
+
+h1{
+  position: absolute;
+
+
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 5em;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #edf2f4;
+  text-align: center !important;
+
+  & .moving{
+
+    color: #a8dadc;
+    font-weight: 900;
+    will-change: transform;
+  }
+
+}
+
+
+h1 span {
+  font: 700 5em/1;
+  letter-spacing: 50;
+  padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+
+
+/* Clip Background Image */
+
+  background: url(./pant.svg) repeat-x;
+  -webkit-background-clip: text;
+
+/* Animate Background Image */
+
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 40s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% { background-position: -200% 50%; }
+  100% { background-position: 250% 30%; }
+  0% { background-position: -100% 50%; }
 }
