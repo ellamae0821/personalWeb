@@ -15,32 +15,20 @@ const Header = () => {
       // This is the sticky part of the header.
       header={
         <div className="header_wrapper">
-
-            <div className="header_logo">
-              <Link to="/">
-                <img alt="logo" src={logo} />
-              </Link>
-            </div>
-            <div className="navtexts">
-              <div className="header_text">
-                <Link to="/resume">
-                Resumé
-                </Link>
-              </div>
-              <div className="header_text">
-                <Link to="/portfolio">
-                Portfolio
-                </Link>
-              </div>
-              <div className="header_text">
-                <Link to="/contact">
-                  Contact Me
-                </Link>
-                </div>
-            </div>
-
-
-
+          <div className="header_logo">
+            <Link to="/">
+              <img alt="logo" src={logo} />
+            </Link>
+          </div>
+          <div className="header_text">
+            <Link to="/resume">Resumé</Link>
+          </div>
+          <div className="header_text">
+            <Link to="/portfolio">Portfolio</Link>
+          </div>
+          <div className="header_text">
+            <Link to="/contact">Contact Me</Link>
+          </div>
         </div>
       }
       children = {

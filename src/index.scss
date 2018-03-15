@@ -7,12 +7,35 @@ body{
 
   margin: 0;
 }
+//----------------HEADER STUFF------------------
 
+.header_wrapper{
+  display: flex;
+  background: #ffffff;
+  top:10;
+  justify-content: flex-end;
+}
+
+.header_text {
+  display: inline-block;
+  padding: 15px;
+  font-family: 'PT Sans', sans-serif;
+  color: #990099;
+  justify-self: left;
+
+}
+
+.header_logo{
+  //justify-self: flex-start;
+  //justify-self: self-start;
+  //justify-self: right;
+  flex-grow: 1;
+}
+//----------------MAIN PAGE------------------
 
 .homeWrapper{
   display: flex;
   flex-direction: column;
-
 }
 
 .mainItem{
@@ -100,7 +123,7 @@ h1 span {
 
 
 
-
+// ABOUT ME BUTTON ANIMATION
 .login-btn {
   width:200px;
   height:60px;
@@ -151,6 +174,9 @@ h1 span {
   transition:0.25s;
   -webkit-transition:0.25s;}
 
+
+
+//----------------FOOTER STUFF------------------
 .footer{
   display: flex;
   flex-direction: row;
@@ -162,7 +188,7 @@ h1 span {
 }
 
 .fa{
-  font-size: 2em;
+  font-size: 4em;
   padding-right: 30px;
   color: #f8cacc;
 }
