@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|PT+Sans');
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+html{
+  height: 100%;
+}
+
+
 body{
   font-family: 'Raleway', sans-serif;
   background: #ffffff;
-
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
 }
+
+
 //----------------HEADER STUFF------------------
 
 .header_wrapper{
@@ -16,21 +27,47 @@ body{
   justify-content: flex-end;
 }
 
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin textShadow($text-shadow) {
+  -webkit-text-shadow: $text-shadow;
+  -moz-text-shadow: $text-shadow;
+  -ms-text-shadow: $text-shadow;
+  -o-text-shadow: $text-shadow;
+  text-shadow: $text-shadow;
+}
+
+.header_logo{
+  flex-grow: 1; /*  keep left Logo */
+}
+
 .header_text {
   display: inline-block;
   padding: 15px;
   font-family: 'PT Sans', sans-serif;
   color: #990099;
   justify-self: left;
-
+  @include transition(.5s ease-in-out);
+  @include textShadow((0 0 0 transparent,0 0 0 transparent));
+  color:rgba(0,0,0,.1);
+  overflow:visible;
+  &:hover {
+    color:white;
+    @include textShadow((0 0 10px #ff401a,0 0 50px #ff9b1a));
+  }
 }
 
-.header_logo{
-  //justify-self: flex-start;
-  //justify-self: self-start;
-  //justify-self: right;
-  flex-grow: 1;
+a{
+  color: #990099;
+  text-decoration: none;
 }
+
 //----------------MAIN PAGE------------------
 
 .homeWrapper{
@@ -175,6 +212,177 @@ h1 span {
   -webkit-transition:0.25s;}
 
 
+//----------------RESUME PAGE------------------
+  .resume{
+  padding-top: 70px;
+  margin: 12px auto 6px auto;
+  font-family: Helvetica,Arial,Sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: normal;
+  font-size-adjust: none;
+  font-stretch: normal;
+  -x-system-font: none;
+  display: block;
+}
+
+//----------------PORTFOLIO PAGE------------------
+.eachTech{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+
+.eachTech{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+
+.portfolio{
+  position:absolute;
+  top:30%;
+  color: #990099;
+  font-family: 'Raleway', sans-serif;
+  flex: 1;
+}
+
+.container {
+  width: 600px;
+  margin: 0px auto 30px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  text-align: center;
+  font-weight: 200;
+}
+
+.avatar-flip {
+  border-radius: 150px;
+  overflow: hidden;
+  height: 150px;
+  width: 119px;
+  position: relative;
+  margin: auto;
+  top: -30px;
+  box-shadow: 0 0 0 13px #bbc2dd;
+  -webkit-box-shadow: 0 0 0 13px #bbc2dd;
+  -moz-box-shadow: 0 0 0 13px #bbc2dd;
+}
+.avatar-flip img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+.avatar-flip img:first-child {
+  z-index: 1;
+}
+.avatar-flip img:last-child {
+  z-index: 0;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.hey{
+  font-weight: 500;
+  font-size:116px;
+}
+
+
+.techWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.card{
+  display: inline-block;
+  flex: 1 1 calc(10% - 1rem);
+  transition: all 200ms ease;
+  background: #fff;
+  border: 1px solid #ebecec;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin: .5rem;
+  padding: 2.5rem;
+}
+
+p{
+  text-align: center;
+}
+
+.techWrapper .card img{
+  max-width: 50px;
+  border-radius:6px;
+}
+
+.card img{
+  display: block;
+  margin: 0 auto;
+}
+
+.titlePort{
+  text-align: center;
+  color: #990099;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+
+
+.cardBek{
+  display: inline-block;
+  flex: 1 1 calc(10% - 1rem);
+  transition: all 200ms ease;
+  background: #fff;
+  border: 1px solid #ebecec;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin: .5rem;
+  padding: 2.5rem;
+}
+
+.cardBek img{
+  display: block;
+  margin: 0 auto;
+  width: 325px;
+  height: 200px;
+}
+
+.portWrapper .cardBek img{
+
+  border-radius:6px;
+}
+
+.portWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.highlights {
+  display: inline-block;
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
+}
+
+.contact{
+  padding-top: 100px;
+}
 
 //----------------FOOTER STUFF------------------
 .footer{
@@ -185,10 +393,12 @@ h1 span {
   left: 0;
   bottom: 0;
   width: 100%;
+  background-color: white;
+  height: 50px;
 }
 
 .fa{
-  font-size: 4em;
+  font-size: 3em;
   padding-right: 30px;
   color: #f8cacc;
 }
