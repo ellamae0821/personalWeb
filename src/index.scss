@@ -1,22 +1,114 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|PT+Sans');
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+html{
+  height: 100%;
+}
+
+
 body{
   font-family: 'Raleway', sans-serif;
   background: #ffffff;
-
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
 }
 
+
+//----------------HEADER STUFF------------------
+
+.header_wrapper{
+  display: flex;
+  background: #ffffff;
+  top:10;
+  justify-content: flex-end;
+}
+
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin textShadow($text-shadow) {
+  -webkit-text-shadow: $text-shadow;
+  -moz-text-shadow: $text-shadow;
+  -ms-text-shadow: $text-shadow;
+  -o-text-shadow: $text-shadow;
+  text-shadow: $text-shadow;
+}
+
+.header_logo{
+  flex-grow: 1; /*  keep left Logo */
+}
+
+.header_text {
+  display: inline-block;
+  padding: 15px;
+  font-family: 'PT Sans', sans-serif;
+  color: #990099;
+  justify-self: left;
+  @include transition(.5s ease-in-out);
+  @include textShadow((0 0 0 transparent,0 0 0 transparent));
+  color:rgba(0,0,0,.1);
+  overflow:visible;
+  &:hover {
+    color:white;
+    @include textShadow((0 0 10px #ff401a,0 0 50px #ff9b1a));
+  }
+}
+
+a{
+  color: #990099;
+  text-decoration: none;
+}
+
+//----------------MAIN PAGE------------------
+
+.homeWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.mainItem{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+//Mouse move "Ella Mae Arana"
 .move{
   position: relative;
-  height: 80vh;
+  height: 60vh;
   width: 100vw;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
+}
+
+//div inside .move for "Ella Mae Arana"
+h1{
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 5em;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #edf2f4;
+  text-align: center !important;
+
+  & .moving{
+
+    color: #a8dadc;
+    font-weight: 900;
+    will-change: transform;
+  }
 }
 
 
@@ -52,10 +144,15 @@ h1 span {
   0% { background-position: -100% 50%; }
 }
 
+@media screen and (max-width: 560px) {
+  h1 {
+
+  }
+}
+
+
 .jobTitle{
   font-weight: 200;
-  top: 55%;
-  max-width: 50%;
   font-family: 'Raleway', sans-serif;
   color: #990099;
 
@@ -63,173 +160,7 @@ h1 span {
 
 
 
-h1{
-  position: absolute;
-  top: 35%;
-
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 5em;
-  font-weight: 700;
-  white-space: nowrap;
-  color: #edf2f4;
-  text-align: center !important;
-
-  & .moving{
-    display: inline-block;
-    color: #a8dadc;
-    font-weight: 900;
-    will-change: transform;
-  }
-
-}
-/*
-@media screen and (max-width: 632px){
-  span {
-    font-size: 50px;
-  }
-  .jobTitle {
-    position: absolute;
-    top: 70%;
-    left: 27%;
-  }
-  .header_text {
-    padding: 5px;
-  }
-
-  .login-btn {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
- */
-
-
-/* @media screen and (max-width: 350px){
-  span {
-    font-size: 40px;
-  }
-  .jobTitle {
-    position: absolute;
-    top: 60%;
-    left: 10%;
-  }
-  .header_text {
-    padding: 5px;
-  }
-  .header_logo {
-    width: 100%;
-    text-align: center;
-    padding-right: 70px;
-    margin-bottom: 20px;
-    padding-top: 0px;
-  }
-} */
-
-.header_wrapper{
-  flex-direction: row;
-  background: #ffffff;
-  top:10;
-  text-align: right;
-}
-
-a{
-  color: #990099;
-  text-decoration: none;
-}
-
-.header_text {
-  display: inline-block;
-  padding: 15px;
-  font-family: 'PT Sans', sans-serif;
-  color: #990099;
-}
-
-
-.header_logo{
-  display: inline-block;
-  padding-top: 10px;
-  padding-left: 60px;
-  position: absolute;
-  margin: 1px;
-}
-@mixin transition($transition){
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
-
-@mixin textShadow($text-shadow) {
-  -webkit-text-shadow: $text-shadow;
-  -moz-text-shadow: $text-shadow;
-  -ms-text-shadow: $text-shadow;
-  -o-text-shadow: $text-shadow;
-  text-shadow: $text-shadow;
-}
-
-.navtexts {
-  display: inline-block;
-  width:100%;
-  padding-right: 60px;
-  padding-top: 20px;
-  text-decoration: none;
-
-  @include transition(.5s ease-in-out);
-  @include textShadow((0 0 0 transparent,0 0 0 transparent));
-  color:rgba(0,0,0,.1);
-  overflow:visible;
-  &:hover {
-    color:white;
-    @include textShadow((0 0 10px #ff401a,0 0 50px #ff9b1a));
-  }
-}
-
-.resume{
-  padding-top: 70px;
-  margin: 12px auto 6px auto;
-  font-family: Helvetica,Arial,Sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: normal;
-  font-size-adjust: none;
-  font-stretch: normal;
-  -x-system-font: none;
-  display: block;
-}
-
-.footer{
-  text-align: center !important;
-  bottom:3%;
-  left:44%;
-
-}
-
-.fa{
-  font-size: 2em;
-  padding-right: 10px;
-  color: #f8cacc;
-}
-
-.fa-linkedin {
-  color: #8895c3
-}
-
-.madeBy{
-  font-size: 13px;
-  color: #990099;
-  font-family: 'PT Sans', sans-serif;
-}
-
-.eachTech{
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
-
-
+// ABOUT ME BUTTON ANIMATION
 .login-btn {
   width:200px;
   height:60px;
@@ -238,9 +169,7 @@ a{
   -webkit-perspective:500px;
   padding-right: 20px;
   margin-right: 10px;
-  position: absolute;
-  top: 70%;
-  left: 41%;
+
 }
 
 .login-btn:hover .login-btn2{
@@ -283,12 +212,43 @@ a{
   -webkit-transition:0.25s;}
 
 
+//----------------RESUME PAGE------------------
+  .resume{
+  padding-top: 70px;
+  margin: 12px auto 6px auto;
+  font-family: Helvetica,Arial,Sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: normal;
+  font-size-adjust: none;
+  font-stretch: normal;
+  -x-system-font: none;
+  display: block;
+}
+
+//----------------PORTFOLIO PAGE------------------
+.eachTech{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+
+.eachTech{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
 
 .portfolio{
   position:absolute;
   top:30%;
   color: #990099;
   font-family: 'Raleway', sans-serif;
+  flex: 1;
 }
 
 .container {
@@ -342,11 +302,6 @@ a{
   font-size:116px;
 }
 
-.fullName{
-  display: inline-block;
-  color: #e086dd;
-  font-weight: 100;
-}
 
 .techWrapper{
   display: flex;
@@ -428,137 +383,27 @@ p{
 .contact{
   padding-top: 100px;
 }
-/*
- @media screen and (min-width: 1400px) {
 
-
-  .jobTitle{
-    font-weight: 200;
-    position: absolute;
-    top: 55%;
-    left: 40%;
-
-  }
-
-  h1{
-    font-size: 3em;
-  }
-
-  .login-btn {
-    left: 33%;
-  }
-  .header_logo{
-    padding-left: 10px;
-  }
-
-  .navtexts{
-    padding-right: 2px;
-  }
-  .container{
-    width: 390px;
-    font-size: 15px;
-  }
-
-  .avatar-flip{
-    top: -14px;
-  }
-
-} */
-
-
-@media screen and (max-width: 650px) {
-
-  .jobTitle{
-
-    font-size: 13px;
-  }
-
-  h1{
-    font-size: 3.5em;
-  }
-
-  .login-btn {
-    left: 33%;
-  }
-  .header_logo{
-    padding-left: 10px;
-  }
-
-  .navtexts{
-    padding-right: 2px;
-  }
-  .container{
-    width: 390px;
-    font-size: 15px;
-  }
-
-  .avatar-flip{
-    top: -14px;
-  }
-
+//----------------FOOTER STUFF------------------
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  height: 50px;
 }
 
-@media screen and (max-width: 414px) {
-
-  .jobTitle{
-
-  }
-
-  .login-btn {
-    left: 28%;
-  }
-  .navtexts{
-    padding-right: 0px;
-    font-size: 13px;
-  }
-
-  .container{
-    width: 350px;
-    font-size: 14px;
-    margin: 0px 0px 20px 0px;
-
-  }
-
-  .cardBek{
-  padding: 0.5rem;
-  }
+.fa{
+  font-size: 3em;
+  padding-right: 30px;
+  color: #f8cacc;
 }
 
-@media screen and (max-width: 365px) {
-
-  .jobTitle{
-
-  }
-
-  h1{
-    font-size: 2em;
-  }
-
-  .header_logo{
-    padding-left: 5px;
-  }
-
-  .login-btn {
-    left: 20%;
-  }
-
-  .navtexts{
-    padding-right: 0px;
-    font-size: 13px;
-  }
-
-  .container{
-    width: 300px;
-    font-size: 14px;
-    margin: 0px 0px 20px 0px;
-
-  }
-  .portfolio{
-    width:350px;
-  }
-
-  .cardBek{
-  padding: 0.5rem;
-  }
-
+.fa-linkedin {
+  color: #8895c3
 }
+
