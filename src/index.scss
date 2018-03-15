@@ -9,8 +9,19 @@ body{
 }
 
 
+.homeWrapper{
+  display: flex;
+  flex-direction: column;
 
+}
 
+.mainItem{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+//Mouse move "Ella Mae Arana"
 .move{
   position: relative;
   height: 80vh;
@@ -22,10 +33,9 @@ body{
 
 }
 
+//div inside .move for "Ella Mae Arana"
 h1{
   position: absolute;
-
-
   transform: translateX(-50%) translateY(-50%);
   font-size: 5em;
   font-weight: 700;
@@ -73,4 +83,10 @@ h1 span {
   0% { background-position: -200% 50%; }
   100% { background-position: 250% 30%; }
   0% { background-position: -100% 50%; }
+}
+
+@media screen and (max-width: 560px) {
+  h1 {
+
+  }
 }
